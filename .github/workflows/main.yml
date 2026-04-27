@@ -43,7 +43,7 @@ jobs:
         run: |
           Invoke-WebRequest -Uri "https://pkgs.tailscale.com/stable/tailscale-setup-1.82.0-amd64.msi" -OutFile "$env:TEMP\tailscale.msi"
           Start-Process msiexec.exe -Wait -ArgumentList "/i","$env:TEMP\tailscale.msi","/quiet","/norestart"
-          & "$env:ProgramFiles\Tailscale\tailscale.exe" up --authkey "${{ inputs.ts_authkey }}" --hostname "DEVXRDP" --accept-dns=false
+          & "$env:ProgramFiles\Tailscale\tailscale.exe" up --authkey "${{ inputs.ts_authkey }}" --hostname "ALGHZAL" --accept-dns=false
 
       - name: Setup RDP
         run: |
